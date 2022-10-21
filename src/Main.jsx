@@ -2,7 +2,7 @@ import React from "react";
 
 const population = {
   display: "flex",
-  justifyContent: "center",
+  justifyContent: "space-between",
   alignItems: "center",
 };
 
@@ -10,7 +10,7 @@ const Main = ({ data }) => {
   console.log(data);
 
   return (
-    <div>
+    <div className="container">
       {data.map((item) => {
         return (
           <div style={population}>
@@ -18,7 +18,7 @@ const Main = ({ data }) => {
             <div
               style={{
                 backgroundColor: "orange",
-                width: `${item.population / 10000000}` + "px",
+                width: "100%",
               }}
             ></div>
             <h3>{item.population}</h3>
